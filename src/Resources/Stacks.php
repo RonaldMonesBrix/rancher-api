@@ -94,5 +94,29 @@ class Stacks
         $stack = $this->client->request('DELETE', $this->endpoint.'/'.$id, []);
         return $this->format($stack, new Stack());
     }
+
+
+	public function upgrade($id, $datas)
+	{
+		$stack = $this->client->request('POST', $this->endpoint.'/'.$id.'/?action=upgrade', $datas);
+		return $this->format($stack, new Stack());
+	}
+
+	public function finishUpgrade($id){
+        $stack = $this->client->request('POST', $this->endpoint.'/'.$id.'/?action=finishupgrade');
+        return $this->format($stack, new Stack());
+    }
+
+    public function deactivate($id)
+    {
+        $stack = $this->client->request('POST', $this->endpoint.'/'.$id.'?action=deactivateservices', []);
+        return $this->format($stack, new Stack());
+    }
+
+    public function activate($id)
+    {
+        $stack = $this->client->request('POST', $this->endpoint.'/'.$id.'?action=activateservices', []);
+        return $this->format($stack, new Stack());
+    }
 }
 ?>

@@ -42,4 +42,6 @@ class Stack extends AbstractModel
     public $system;
 
     public $templates;
+
+    public $state;
 }
