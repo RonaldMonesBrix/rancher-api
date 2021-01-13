@@ -1,14 +1,17 @@
 {
-    "name": "tyldar/rancher-api",
+    "name": "ronaldmones/rancher-api",
     "type": "library",
     "authors": [
         {
             "name": "Tyldar",
             "email": "tyldar@hotmail.com"
+        },
+         {
+            "name": "Ronald Mones",
+            "email": "ronald.mones@brixcrm.nl"
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "^6.3",
         "vlucas/phpdotenv": "^2.4"
     },
     "require-dev": {
